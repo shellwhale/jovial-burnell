@@ -14,7 +14,15 @@ RUN apt-get update && apt-get install -y \
     curl \
     wget \
     tcpdump \
-    dnsutils
+    dnsutils \
+    arping \
+    nmap \
+    ipcalc \
+    tcping \
+    python3.8 \
+    python3-pip
+
+RUN python3 -m pip install scapy
 
 CMD /bin/bash
 ENTRYPOINT /bin/bash
