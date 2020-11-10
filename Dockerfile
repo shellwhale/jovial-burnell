@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
     iproute2 \
     curl \
     wget \
-    tcpdump
+    tcpdump \
+    dnsutils
 
 CMD /bin/bash
 ENTRYPOINT /bin/bash
