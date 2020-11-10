@@ -16,4 +16,4 @@ RUN apt-get update && apt-get install -y \
     tcpdump
 
 CMD /bin/bash
-ENTRYPOINT /bin/bash ]
+ENTRYPOINT /bin/bash
