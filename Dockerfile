@@ -18,7 +18,6 @@ RUN apt-get update && apt-get install -y \
     arping \
     nmap \
     ipcalc \
-    tcping \
     python3.8 \
     python3-pip
 
