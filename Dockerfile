@@ -1,6 +1,7 @@
 FROM kalilinux/kali-rolling:latest
 
 RUN apt-get update && apt-get install -y \
+    apt-utils \
     traceroute \
     net-tools \
     iputils-ping \
@@ -9,7 +10,6 @@ RUN apt-get update && apt-get install -y \
     iperf \
     iperf3 \
     net-tools \
-    iputils-ping \
     iproute2 \
     curl \
     wget \
@@ -19,9 +19,9 @@ RUN apt-get update && apt-get install -y \
     nmap \
     ipcalc \
     python3.8 \
-    python3-pip
-
-RUN python3 -m pip install scapy
+    python3-pip \
+    && python3 -m pip install scapy \
+    && apt-get autoremove -y --purge gcc python3-pip
 
 CMD /bin/bash
 ENTRYPOINT /bin/bash
