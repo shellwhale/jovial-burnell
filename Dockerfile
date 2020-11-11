@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
     ipcalc \
     python3.8 \
     python3-pip \
+    openssh-client \
     && python3 -m pip install scapy \
     && apt-get autoremove -y --purge gcc python3-pip
 
