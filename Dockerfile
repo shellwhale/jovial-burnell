@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     python3.8 \
     python3-pip \
     openssh-client \
+    ansible \
     && python3 -m pip install scapy \
     && apt-get autoremove -y --purge gcc python3-pip
 
